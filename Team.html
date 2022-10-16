@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/65d2ebec1e.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Team</title>
+
+    <!-- Team-CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #f0efeb;
+        }
+
+        .core-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team {
+            width: 1300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .holder {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transition: .3s;
+        }
+
+        .holder img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .holder::before {
+            content: '';
+            left: -7px;
+            top: -7px;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-top: 7px solid #5C38FF;
+            border-left: 7px solid #5C38FF;
+            transition: .5s;
+        }
+
+        .holder::after {
+            content: '';
+            right: -7px;
+            bottom: -7px;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-bottom: 7px solid #5C38FF;
+            border-right: 7px solid #5C38FF;
+            transition: .5s;
+        }
+
+        .holder:hover {
+            transform: scale(1.1);
+        }
+
+        .holder:hover::before {
+            width: 0;
+            top: 0;
+            height: calc(100%);
+        }
+
+        .holder:hover::after {
+            width: 0;
+            bottom: 0;
+            height: calc(100%);
+        }
+
+        .infor {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            transition: .4s;
+            transform-origin: bottom;
+            transition-delay: .3s;
+            transform: scaleY(0)
+        }
+
+        .holder:hover .infor {
+            transform: scaleY(1);
+
+        }
+
+        .infor h2 {
+            font-size: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .infor h2 span {
+            display: block;
+            font-size: 16px;
+            margin-top: 30px;
+            line-height: 25px;
+        }
+
+        .infor ul {
+            width: 180px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .infor ul li {
+            list-style: none;
+        }
+
+        .infor ul li a {
+            display: block;
+            font-size: 24px;
+            color: #f0efeb;
+            transition: .3s;
+        }
+
+        .infor ul li a :hover {
+            text-decoration: none;
+            transform: scale(1.1);
+            color: #5C38FF !important;
+        }
+
+        .team-card {
+            margin: 40px;
+        }
+
+        .name {
+            font-size: 20px;
+            line-height: 37px;
+            letter-spacing: 1px;
+        }
+
+        .post {
+            color: #5C38FF;
+            line-height: 37px;
+            letter-spacing: 1px;
+        }
+
+        .team-heading h1 b span {
+            color: #5C38FF;
+        }
+
+        @media(min-width: 320px) and (max-width: 576px) {
+            .team {
+                flex-direction: column;
+                max-width: 300px;
+            }
+
+            .holder {
+                width: 200px;
+                height: 260px;
+            }
+
+            .infor h2 span {
+                font-size: 14px;
+            }
+
+            .infor h2 {
+                font-size: 20px;
+            }
+
+            .infor ul li a {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 990px) {
+            .team {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <img src="./Images/iste logo nav.png" alt="">
+        <ul>
+            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf" class="links"
+                    target="_blank">Brochure</a></li>
+            <li><a href="./Team.html" class="links">Team</a></li>
+            <li><a href="#ContactForm" class="links">Contact</a></li>
+            <li><a href="./Domains.html" class="active">Apply Now !</a></li>
+        </ul>
+    </nav>
+
+    <!-- TEAM-PAGE -->
+    <div class="container-fluid core-team">
+        <!-- Team-Heading -->
+        <div class="container-fluid my-5">
+            <div class="row justify-content-center team-heading">
+                <h1><b><span>CORE</span> TEAM</b></h1>
+            </div>
+            <div class="row justify-content-center team-sub">
+                <span>lorem ipsum lorem ipsum</span>
+            </div>
+        </div>
+
+        <!-- Team-members -->
+        <div class="container team mx-5">
+            <div class="row justify-content-center">
+                <div class="team-card">
+                    <div class="holder">
+                        <img src="./Images/Hero bg.png" alt="">
+                        <div class="infor">
+                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtitle mt-5">
+                        <span class="name">Raj Pawar</span> <br>
+                        <span class="post">Technical Head</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="holder">
+                        <img src="./Images/Hero bg.png" alt="">
+                        <div class="infor">
+                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtitle mt-5">
+                        <span class="name">Raj Pawar</span> <br>
+                        <span class="post">Technical Head</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="holder">
+                        <img src="./Images/Hero bg.png" alt="">
+                        <div class="infor">
+                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtitle mt-5">
+                        <span class="name">Raj Pawar</span> <br>
+                        <span class="post">Technical Head</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="holder">
+                        <img src="./Images/Hero bg.png" alt="">
+                        <div class="infor">
+                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtitle mt-5">
+                        <span class="name">Raj Pawar</span> <br>
+                        <span class="post">Technical Head</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="holder">
+                        <img src="./Images/Hero bg.png" alt="">
+                        <div class="infor">
+                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtitle mt-5">
+                        <span class="name">Raj Pawar</span> <br>
+                        <span class="post">Technical Head</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- FOOTER -->
+     <footer>
+        <div class="container-fluid footer" style="background: #2C2C2C;">
+            <div class="container-fluid footer-box">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-8 no-gutters">
+                        <div class="col-12 row">
+                            <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+                                <div class="col-12">
+                                    <img src="./Images/ISTE Logo.svg" alt="">
+                                </div>
+                                <div class="col-12 pt-5">
+                                    <p>
+                                        The ISTE and InternXpo logo is copyright under ISTE.ORG
+                                        ISTE SIESGST operates indepedently under ISTE.ORG
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
+                                <div class="widget">
+                                    <h5>Useful Links</h5>
+                                    <ul class="list-unstyled float-left links pt-3">
+                                        <li><a href="">About</a></li>
+                                        <li><a href="">Team</a></li>
+                                        <li><a href="">Brochure</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5 subtitle">
+                            <p>
+                                Site Designed & Maintained by : <span> Technical Team @ISTESIESGST </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <h5>Reach Us</h5>
+                        <div class="widget">
+                            <ol class="list-unstyled social ">
+                                <li><a href=""><i class="fa-brands fa-square-facebook fa-xl"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                            </ol>
+                        </div>
+                        <div class="col-12 no-gutters row info">
+                            <div class="col-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="col-10">
+                                <p> Varun Sondur: 8879917905 <br>
+                                    Raj Pawar: 9321763056</p>
+                            </div>
+                        </div>
+                        <div class="col-12 no-gutters row info">
+                            <div class="col-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="col-10">
+                                <p>promethean@siesgst.ac.in</p>
+                            </div>
+                        </div>
+                        <div class="col-12 no-gutters row info">
+                            <div class="col-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="col-10">
+                                <p>
+                                    SIES Graduate School of Technology, <br>
+                                    Plot 1-C D&E, Sector-V, Navi Mumbai, Maharashtra.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
