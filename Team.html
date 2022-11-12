@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,7 +19,7 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Team</title>
+    <title>Team | InternXpo'22</title>
 
     <!-- Team-CSS -->
     <style>
@@ -24,6 +27,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        #hero {
+            background: url(./Images/TeamHeroBG.svg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh);
         }
 
         body {
@@ -106,7 +116,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.66);
             backdrop-filter: blur(8);
             display: flex;
             justify-content: center;
@@ -168,7 +178,7 @@
         }
 
         .name {
-            font-size: 20px;
+            font-size: 25px;
             line-height: 37px;
             letter-spacing: 1px;
         }
@@ -187,6 +197,10 @@
             .team {
                 flex-direction: column;
                 max-width: 300px;
+            }
+
+            .infor {
+                row-gap: 20px;
             }
 
             .holder {
@@ -215,206 +229,487 @@
     </style>
 </head>
 
-<body>
+<body onload="preloader()">
 
-    <!-- NAVBAR -->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <img src="./Images/iste logo nav.png" alt="">
+    <!-- PRELOADER -->
+    <div id="loading"></div>
+
+    <!-- ScrollBar -->
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+
+    <div class="banner" id="sec">
+
+        <!-- HERO-SECTION -->
+        <section id="hero">
+            <!-- NAVBAR -->
+            <nav>
+                <div id="toggle" onclick="toggle()"></div>
+                <a href="./Iste.html"><img src="./Images/iste logo nav.png" alt=""></a>
+                <ul>
+                    <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf" class="links"
+                            target="_blank">Brochure</a></li>
+                    <li><a href="./Team.html" class="links">Team</a></li>
+                    <li><a href="#contact" class="links">Contact</a></li>
+                    <li><a href="./Domains.html" class="active"><span>Apply Now !</span></a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- CORE TEAM-PAGE -->
+        <div class="container-fluid core-team">
+            <!-- Team-Heading -->
+            <div class="container-fluid my-5">
+                <div class="row justify-content-center team-heading">
+                    <h1><b><span>CORE</span> TEAM</b></h1>
+                </div>
+                <div class="row justify-content-center team-sub">
+                    <span> Ideate. &nbsp; Build. &nbsp; Repeat. </span>
+                </div>
+            </div>
+
+            <!-- Team-members -->
+            <div class="container team mx-5">
+                <div class="row justify-content-center">
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Yash.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Yash Wagh <br> <span> Chairperson </span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/yashwagh31" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://instagram.com/_yash_.31?igshid=YmMyMTA2M2Y=" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/YashW31" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Yash Wagh</span> <br>
+                            <span class="post">Chairperson</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Varun.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Varun Sondur <br> <span> Vice <br> Chairperson </span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/varun-sondur-297445181/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/__varun__sondur__/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/VSondur123" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Varun Sondur</span> <br>
+                            <span class="post">Vice Chairperson</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Namah Kohli .jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Namah Kohli <br> <span>Secretary</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/namah-kohli-7370381ba" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://instagram.com/namahkohli?igshid=YmMyMTA2M2Y="
+                                            target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/NAMAH-KOHLI" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Namah Kohli</span> <br>
+                            <span class="post">Secretary</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Bhavika Wani.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Bhavika Wani <br> <span>Joint <br> Secretary</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/bhavika-wani-3b9139244/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/srt.forever_/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/Bhavikawani" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Bhavika Wani</span> <br>
+                            <span class="post">Joint Secretary</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Nidhish Vyas .webp" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Nidhish Vyas <br> <span>Treasurer</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/nidhish-vyas-15a90b1b3" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/nidhish_vyas" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/NidhishVyas" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Nidhish Vyas</span> <br>
+                            <span class="post">Treasurer</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Vignesh.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Vignesh <br> <span>Joint <br> Treasurer</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/vignesh-iyer-b94676213/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/__v_i_g_g_y___/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Vignesh </span> <br>
+                            <span class="post">Joint Treasurer</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/KGauri.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Gauri K <br> <span>Event <br> Manager</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/nidhish-vyas-15a90b1b3" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/gauri-k-5490081b0" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/gauri0707" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Gauri K </span> <br>
+                            <span class="post">Event Manager</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Swarup Patil.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Swarup Patil <br> <span>Event <br> Manager</span></h2>
+                                <ul>
+                                    <li><a href="https://www.instagram.com/_swaruppatil_/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/swarup-patil-7163141a0/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/Swarup-3112" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Swarup Patil</span> <br>
+                            <span class="post">Event Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HEAD TEAM-PAGE -->
+        <div class="container-fluid core-team">
+            <!-- Team-Heading -->
+            <div class="container-fluid my-5">
+                <div class="row justify-content-center team-heading">
+                    <h1><b><span>HEAD </span> TEAM</b></h1>
+                </div>
+                <div class="row justify-content-center team-sub">
+                    <span>Ideate. &nbsp; Build. &nbsp; Repeat.</span>
+                </div>
+            </div>
+
+            <!-- Team-members -->
+            <div class="container team mx-5">
+                <div class="row justify-content-center">
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Raj Pawar.jpeg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Raj Pawar<br> <span> Technical <br> Head </span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/raj-pawar-14629324a/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/rajpawar9971/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/Avadark-RajPawar" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Raj Pawar</span> <br>
+                            <span class="post">Technical Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Atharva Tatpuje.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Atharva <br> Tatpuje <br> <span>Social Media <br> Head</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/atharva-tatpuje-20007a220/"
+                                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/atharva_tatpuje/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/AtharvaTatpuje" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Atharva Tatpuje</span> <br>
+                            <span class="post">Social Media Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/sakshi S.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Sakshi S <br> <span>Social Media <br> Head</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/sakshi-sakhare-0902/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_.sakxhhii._/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/Sakshiiii09" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Sakshi S</span> <br>
+                            <span class="post">Social Media Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Mansi Kore.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Mansi Kore<br> <span>Publicity <br> Head</span></h2>
+                                <ul>
+                                    <li><a href="http://www.linkedin.com/in/mansi-kore-798b65205" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/mansikoree/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/mansikoree" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Mansi Kore </span> <br>
+                            <span class="post">Publicity Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Shreyas.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Shreyas Upadhyay <br> <span>Publicity <br> Head</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/shreyas-upadhyay-a71971217"
+                                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/invites/contact/?i=8fn30edlb47k&utm_content=22vex0p"
+                                            target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/varad-thorat" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Shreyas Upadhyay</span> <br>
+                            <span class="post">Publicity Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Varad Thorat.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Varad Thorat <br> <span>Design <br> Head</span></h2>
+                                <ul>
+                                    <li><a href="http://www.linkedin.com/in/mansi-kore-798b65205" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_nusta.aesthetic_/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/varad-thorat" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Varad Thorat</span> <br>
+                            <span class="post">Design Head</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/sayali maske.jpeg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Sayali Maske <br> <span>Alumni <br> Representative</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/sayali-maske-62a3881ba" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://instagram.com/sayalii._?igshid=YmMyMTA2M2Y=" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/sayalimaske" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Sayali Maske</span> <br>
+                            <span class="post">Alumni Representative</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="holder">
+                            <img src="./Members/Samiksha Iyengar.jpg" alt="" style="object-fit: cover;">
+                            <div class="infor">
+                                <h2>Samiksha <br> Iyengar <br> <span>PR Head</span></h2>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/samiksha-iyengar/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/sa.miks.haha/" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://github.com/sam15debug" target="_blank"><i
+                                                class="fa-brands fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="subtitle mt-5">
+                            <span class="name">Samiksha Iyengar</span> <br>
+                            <span class="post">PR Head</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="contact">
+            <div class="container-fluid footer" style="background: #2C2C2C;">
+                <div class="container-fluid footer-box">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-8 no-gutters">
+                            <div class="col-12 row">
+                                <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+                                    <div class="col-12">
+                                        <img src="./Images/ISTE Logo.svg" alt="">
+                                    </div>
+                                    <div class="col-12 pt-5">
+                                        <p>
+                                            The ISTE and InternXpo logo is copyright under ISTE.ORG
+                                            ISTE SIESGST operates indepedently under ISTE.ORG
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
+                                    <div class="widget">
+                                        <h5>Useful Links</h5>
+                                        <ul class="list-unstyled float-left links pt-3">
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="./Team.html">Team</a></li>
+                                            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
+                                                    target="_blank">Brochure</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 pt-5 subtitle">
+                                <p>
+                                    Site Designed & Maintained by : <span> Technical Team @ISTESIESGST </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <h5>Reach Us</h5>
+                            <div class="widget">
+                                <ol class="list-unstyled social ">
+                                    <li><a href="mailto:iste@siesgst.ac.in" target="_blank"><i
+                                                class="fa-solid fa-square-envelope fa-xl"></i></i></i></a></li>
+                                    <li><a href="https://www.instagram.com/iste_siesgst/" target="_blank"><i
+                                                class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/iste-sies-gst/mycompany/"
+                                            target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                                </ol>
+                            </div>
+                            <div class="col-12 no-gutters row info">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p> Varun Sondur: 8879917905 <br>
+                                        Raj Pawar: 9321763056</p>
+                                </div>
+                            </div>
+                            <div class="col-12 no-gutters row info">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p>iste@siesgst.ac.in</p>
+                                </div>
+                            </div>
+                            <div class="col-12 no-gutters row info">
+                                <div class="col-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p>
+                                        SIES Graduate School of Technology, <br>
+                                        Plot 1-C D&E, Sector-V, Navi Mumbai, Maharashtra.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- MOBILE NAVMENU -->
+    <div id="navigation" class="a">
         <ul>
             <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf" class="links"
                     target="_blank">Brochure</a></li>
             <li><a href="./Team.html" class="links">Team</a></li>
-            <li><a href="#ContactForm" class="links">Contact</a></li>
-            <li><a href="./Domains.html" class="active">Apply Now !</a></li>
+            <li><a href="#contact" class="links">Contact</a></li>
+            <li><a href="./Domains.html">Apply Now !</a></li>
         </ul>
-    </nav>
-
-    <!-- TEAM-PAGE -->
-    <div class="container-fluid core-team">
-        <!-- Team-Heading -->
-        <div class="container-fluid my-5">
-            <div class="row justify-content-center team-heading">
-                <h1><b><span>CORE</span> TEAM</b></h1>
-            </div>
-            <div class="row justify-content-center team-sub">
-                <span>lorem ipsum lorem ipsum</span>
-            </div>
-        </div>
-
-        <!-- Team-members -->
-        <div class="container team mx-5">
-            <div class="row justify-content-center">
-                <div class="team-card">
-                    <div class="holder">
-                        <img src="./Images/Hero bg.png" alt="">
-                        <div class="infor">
-                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="subtitle mt-5">
-                        <span class="name">Raj Pawar</span> <br>
-                        <span class="post">Technical Head</span>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="holder">
-                        <img src="./Images/Hero bg.png" alt="">
-                        <div class="infor">
-                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="subtitle mt-5">
-                        <span class="name">Raj Pawar</span> <br>
-                        <span class="post">Technical Head</span>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="holder">
-                        <img src="./Images/Hero bg.png" alt="">
-                        <div class="infor">
-                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="subtitle mt-5">
-                        <span class="name">Raj Pawar</span> <br>
-                        <span class="post">Technical Head</span>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="holder">
-                        <img src="./Images/Hero bg.png" alt="">
-                        <div class="infor">
-                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="subtitle mt-5">
-                        <span class="name">Raj Pawar</span> <br>
-                        <span class="post">Technical Head</span>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="holder">
-                        <img src="./Images/Hero bg.png" alt="">
-                        <div class="infor">
-                            <h2>Raj Pawar <br> <span>Technical <br> Head</span></h2>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="subtitle mt-5">
-                        <span class="name">Raj Pawar</span> <br>
-                        <span class="post">Technical Head</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-     <!-- FOOTER -->
-     <footer>
-        <div class="container-fluid footer" style="background: #2C2C2C;">
-            <div class="container-fluid footer-box">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-8 no-gutters">
-                        <div class="col-12 row">
-                            <div class="col-sm-12 col-md-8 col-lg-8 p-0">
-                                <div class="col-12">
-                                    <img src="./Images/ISTE Logo.svg" alt="">
-                                </div>
-                                <div class="col-12 pt-5">
-                                    <p>
-                                        The ISTE and InternXpo logo is copyright under ISTE.ORG
-                                        ISTE SIESGST operates indepedently under ISTE.ORG
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
-                                <div class="widget">
-                                    <h5>Useful Links</h5>
-                                    <ul class="list-unstyled float-left links pt-3">
-                                        <li><a href="">About</a></li>
-                                        <li><a href="">Team</a></li>
-                                        <li><a href="">Brochure</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 pt-5 subtitle">
-                            <p>
-                                Site Designed & Maintained by : <span> Technical Team @ISTESIESGST </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4">
-                        <h5>Reach Us</h5>
-                        <div class="widget">
-                            <ol class="list-unstyled social ">
-                                <li><a href=""><i class="fa-brands fa-square-facebook fa-xl"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                            </ol>
-                        </div>
-                        <div class="col-12 no-gutters row info">
-                            <div class="col-1">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="col-10">
-                                <p> Varun Sondur: 8879917905 <br>
-                                    Raj Pawar: 9321763056</p>
-                            </div>
-                        </div>
-                        <div class="col-12 no-gutters row info">
-                            <div class="col-1">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="col-10">
-                                <p>promethean@siesgst.ac.in</p>
-                            </div>
-                        </div>
-                        <div class="col-12 no-gutters row info">
-                            <div class="col-1">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="col-10">
-                                <p>
-                                    SIES Graduate School of Technology, <br>
-                                    Plot 1-C D&E, Sector-V, Navi Mumbai, Maharashtra.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./Script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

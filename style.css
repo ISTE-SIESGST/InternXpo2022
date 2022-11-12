@@ -7,10 +7,21 @@
   color: #ffffff;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: 0.5s;
+}
+
+#loading {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  background: #343333 url(./Images/Preloader.gif) no-repeat center;
+  z-index: 99;
 }
 
 body {
   background: #232323;
+  font-size: 1rem;
 }
 
 h5 {
@@ -28,7 +39,15 @@ label {
 
 nav {
   height: 80px;
+  width: 100%;
   background: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top:0;
+  z-index: 3;
+}
+
+#navigation {
+  display: none;
 }
 
 nav img {
@@ -52,7 +71,7 @@ nav ul li {
 nav ul li a {
   position: relative;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 15px;
   padding: 10px 0;
   text-transform: uppercase;
 }
@@ -74,6 +93,37 @@ nav ul li .links:hover:before {
   text-decoration: none;
   transform: scaleX(1);
   transform-origin: left;
+}
+
+nav ul li .active {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 50px;
+  margin-top: 12px;
+}
+.active span {
+  position: relative;
+  z-index: 2;
+}
+nav ul li .active::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%,-50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #4b25f2;
+  transition: width 0.5s, height 0.5s;
+  z-index: 1;
+}
+
+nav ul li .active:hover:before {
+  width: 300px;
+  height: 300px;
 }
 label #btn,
 label #cancel {
@@ -100,10 +150,16 @@ a.active:hover {
 }
 
 section {
-  background: url(./Images/Hero\ bg.png) no-repeat;
+  position: relative;
+  background: url(./Images/LandHeroBG.svg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: calc(100vh);
+  background-attachment: fixed;
+  height: 107vh;
+}
+
+.internxpo_head {
+  z-index: 99;
 }
 
 ul {
@@ -120,31 +176,53 @@ ul {
 }
 a:hover {
   text-decoration: none;
-  color: #ffffff;
 }
 
 ol > li {
   display: inline-block;
 }
 
+.register_button {
+  width: 200px;
+  height: 60px;
+  background: transparent;
+  border: 1.4px solid #181163;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 15px;
+}
+.register_button:hover {
+  background: #ffffff;
+  color: #181163;
+}
 .widget .links li a {
   color: #ffffff;
 }
 
+.widget .links li a:hover {
+  color: #5c38ff;
+}
+
 .widget .social li a {
   color: #ffffff;
-  padding: 0 10px;
+  padding-right:20px;
+}
+
+.social li a i:hover {
+  color: #6648eb;
+  transform: scale(1.2);
 }
 
 .info {
   color: #ffffff;
   padding: 7px 0;
 }
-.footer {
-  margin-top: 7%;
-}
+
 .footer-box {
-  padding: 69px;
+  padding: 69px 50px 30px 50px;
+  max-width: 1440px;
 }
 
 .social {
@@ -169,8 +247,11 @@ ol > li {
 
 .contact-heading {
   text-align: center;
-  font-size: 38px;
   padding-top: 40px;
+}
+
+.contact-heading h1 {
+  font-size: 36px;
 }
 
 .contact-btn {
@@ -185,7 +266,8 @@ ol > li {
   height: 40px !important;
 }
 
-.details input {
+.details input,
+textarea {
   border: none;
   border-bottom: 2px solid white;
   background-color: #2c2c2c;
@@ -217,12 +299,37 @@ ol > li {
   padding-top: 6%;
 }
 
+.countdown {
+  padding: 50px 0;
+  background: rgb(17, 16, 16);
+}
+
+.timer {
+  font-size: 36px;
+}
+
+.timer h2 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1;
+  transform: scale(1.5);
+  margin: 20px 0;
+}
+.timer small {
+  transform: scale(2);
+  margin-top: 2px;
+}
+
 .holder {
   padding: 6%;
 }
 
-.about {
+#about {
   margin: 6rem auto;
+}
+
+.about-image {
+  margin-top: 100px;
 }
 
 .about-image > img {
@@ -230,18 +337,49 @@ ol > li {
 }
 
 .about-heading > h3 i {
+  font-size: 30px;
   color: #5c38ff;
   font-family: "Sorts Mill Goudy", serif;
 }
+.about-title {
+  font-size: 36px;
+  position: relative;
+}
+.about-title::before {
+  content: "";
+  position: absolute;
+  width: 12%;
+  border-bottom: 1px solid #5c38ff;
+  left: 33%;
+  bottom: -3.5%;
+  transform: translateX(-250%);
+}
+
+.about-title::after {
+  content: "\f219";
+  font: var(--fa-font-solid);
+  height: 6px;
+  color: #5c38ff;
+  display: block;
+  margin: 20px 0;
+  font-size: 1rem;
+}
 
 .about-info > p {
-  font-size: 16px !important;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 32px;
 }
 
 .about-holder {
   display: flex;
   flex-direction: column;
 }
+
+.company-details {
+  margin-bottom: 100px;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -260,6 +398,7 @@ ol > li {
   height: 100%;
   background: #5c38ff;
   animation: animate 5s linear infinite;
+  transition: 0s;
 }
 #progressbar::before {
   content: "";
@@ -281,6 +420,7 @@ ol > li {
   background: #5c38ff;
   filter: blur(10px);
 }
+
 @media (max-width: 990px) {
   nav img {
     left: 6%;
@@ -292,6 +432,12 @@ ol > li {
   }
 }
 @media (max-width: 860px) {
+  nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 35px;
+  }
   label #btn {
     display: block;
   }
@@ -301,13 +447,14 @@ ol > li {
     height: 100vh;
     background: #34495e;
     top: 80px;
+    z-index: 99;
     left: -100%;
     transition: all 0.5s;
     text-align: center;
   }
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 500px 0;
     line-height: 30px;
   }
   nav ul li a {
@@ -322,9 +469,99 @@ ol > li {
   #check:checked ~ label #cancel {
     display: block;
   }
+
+  #toggle {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: -11px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  #toggle::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+  #toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+  .banner.active #toggle::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .banner.active #toggle::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .banner {
+    transition: 0.5s;
+  }
+ 
+  #navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: calc(400px);
+    height: 100%;
+    background: #2b1f5e;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  #navigation.active {
+    right: 0;
+  }
+  #navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  #navigation ul li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  #navigation ul li a:hover {
+    transform: translateX(30px);
+    transition: 0.5s;
+    color: #6648eb;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
+  #navigation {
+    width: 250px;
+  }
+  #navigation ul li a {
+    font-size: 1.5em;
+  }
+  .internxpo_head h1 {
+    font-size: 2rem;
+  }
+  .internxpo_head h2 {
+    font-size: 1.5rem;
+  }
+  .internxpo_head h3 {
+    font-size: 1.5rem;
+  }
   .footer-box {
     padding: 9px;
     padding-top: 45px;
@@ -340,20 +577,50 @@ ol > li {
   }
 
   .checkbox-msg > label {
-    position: relative;
+    position: absolute;
     font-size: 12px;
+    left: 13%;
   }
 
+  .timer {
+    font-size: 12px;
+  }
+  .timer h2 {
+    transform: scale(1);
+  }
   .about-heading {
     text-align: center;
   }
 
-  .about-info {
+  .about-info > p {
     text-align: center;
+    font-size: 11px;
+    line-height: 28px;
   }
 
   .about-holder {
     justify-content: center;
+  }
+  .about-title::before {
+    transform: translateX(72%);
+    width: 14%;
+  }
+  .about-title::after {
+    transform: translateX(-9%);
+    margin: 10px 0;
+    height: 6px;
+    font-size: 1rem;
+  }
+  .about-heading {
+    margin-top: 35px;
+  }
+  .button {
+    margin-top: 100px;
+    height: 40px !important;
+    justify-content: center;
+  }
+  #progressbar {
+    width: 5px;
   }
 }
 
@@ -369,5 +636,31 @@ ol > li {
 
   .about-info > p {
     font-size: 14px;
+    line-height: 26px;
+  }
+  .about-info > p {
+    font-size: 11px !important;
+  }
+  .about-heading > h3 i {
+    font-size: 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-title::after {
+    height: 4.5px;
+    margin: 7px 0;
+    font-size: 1rem;
+  }
+  .about-title::after {
+    margin: 10px 0;
+    height: 4.5px;
+    font-size: 1rem;
+  }
+  .button {
+    margin-top: 64px;
+    height: 40px !important;
   }
 }
+
