@@ -179,7 +179,7 @@ a.active:hover {
 
 section {
   position: relative;
-  background: url(./Images/LandHeroBG.svg) no-repeat;
+  background: url(./Images/LandHeroBG.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
