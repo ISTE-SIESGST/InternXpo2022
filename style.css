@@ -42,8 +42,12 @@ nav {
   width: 100%;
   background: rgba(0, 0, 0, 0.35);
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 3;
+}
+
+.active-scroll {
+  background: #1b1919;
 }
 
 #navigation {
@@ -51,7 +55,10 @@ nav {
 }
 
 nav img {
+  background: none;
+  padding: 0;
   width: 150px;
+  border-radius: 0;
   position: absolute;
   top: 17px;
   left: 7%;
@@ -112,7 +119,7 @@ nav ul li .active::before {
   position: absolute;
   top: var(--y);
   left: var(--x);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
   border-radius: 50%;
@@ -124,6 +131,26 @@ nav ul li .active::before {
 nav ul li .active:hover:before {
   width: 300px;
   height: 300px;
+}
+
+.internxpo_head {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  font-weight: bolder;
+  animation: typing 3s steps(40, end), infinite;
+}
+.internxpo_head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  height: 80%;
+  width: 2px;
+  animation: cursor 0.8s steps(3) infinite;
 }
 label #btn,
 label #cancel {
@@ -140,6 +167,7 @@ label #cancel {
 }
 a.active {
   background: #5c38ff;
+  color: #ffffff;
   transition: 0.5s;
   padding: 10px 30px;
   border-radius: 10px;
@@ -156,10 +184,6 @@ section {
   background-position: center;
   background-attachment: fixed;
   height: 107vh;
-}
-
-.internxpo_head {
-  z-index: 99;
 }
 
 ul {
@@ -207,7 +231,7 @@ ol > li {
 
 .widget .social li a {
   color: #ffffff;
-  padding-right:20px;
+  padding-right: 20px;
 }
 
 .social li a i:hover {
@@ -266,22 +290,70 @@ ol > li {
   height: 40px !important;
 }
 
-.details input,
+.box {
+  position: relative;
+  width: 100%;
+  padding-top: 10%;
+}
+
+.box input,
 textarea {
   border: none;
-  border-bottom: 2px solid white;
-  background-color: #2c2c2c;
+  outline: none;
+  /* border-bottom: 2px solid white; */
+  background-color: transparent;
   width: 100%;
+  box-shadow: none;
   font-size: 14px;
+  padding: 10px 0 5px;
+}
+
+textarea {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  height: 190px;
+}
+
+.box span {
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  letter-spacing: 0.1em;
+}
+
+.box input:focus ~ span,
+.box input:valid ~ span {
+  color: #6648eb;
+  transform: translateY(-16px);
+  font-size: 0.8em;
+}
+
+.box i {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+.box input:focus ~ i, 
+.box input:valid ~ i {
+  background: #5c38ff;
+}
+textarea:focus ~ span {
+  color: #5c38ff;
+}
+
+.message span {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
 }
 
 .message {
   padding-top: 3%;
   padding-left: 66px;
-}
-
-.message > input {
-  height: 86.5%;
 }
 
 .checkbox-msg > label {
@@ -293,10 +365,6 @@ textarea {
 .checkbox {
   padding-top: 72px;
   padding-bottom: 40px;
-}
-
-.details .box {
-  padding-top: 6%;
 }
 
 .countdown {
@@ -326,6 +394,8 @@ textarea {
 
 #about {
   margin: 6rem auto;
+  max-width: 1400px;
+  padding: 40px;
 }
 
 .about-image {
@@ -348,11 +418,11 @@ textarea {
 .about-title::before {
   content: "";
   position: absolute;
-  width: 12%;
+  width: 13%;
   border-bottom: 1px solid #5c38ff;
   left: 33%;
   bottom: -3.5%;
-  transform: translateX(-250%);
+  transform: translateX(-252%);
 }
 
 .about-title::after {
@@ -378,6 +448,11 @@ textarea {
 
 .company-details {
   margin-bottom: 100px;
+}
+
+.company_logo {
+  background: #ffffff;
+  padding: 13px;
 }
 
 ::-webkit-scrollbar {
@@ -419,6 +494,28 @@ textarea {
   height: 100%;
   background: #5c38ff;
   filter: blur(10px);
+}
+
+.companies {
+  padding: 50px;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  0%,75% {
+    opacity: 1;
+  }
+  76%,100% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 990px) {
@@ -511,7 +608,7 @@ textarea {
   .banner {
     transition: 0.5s;
   }
- 
+
   #navigation {
     position: fixed;
     top: 0;
@@ -572,14 +669,20 @@ textarea {
   }
 
   .message {
-    padding-top: 6%;
-    padding-left: 31px;
+    padding-top: 15%;
+    padding-left: 19px;
   }
 
   .checkbox-msg > label {
     position: absolute;
     font-size: 12px;
+    margin-right: 22px;
+    text-align: justify;
     left: 13%;
+  }
+
+  textarea {
+    height: 100px;
   }
 
   .timer {
@@ -602,8 +705,8 @@ textarea {
     justify-content: center;
   }
   .about-title::before {
-    transform: translateX(72%);
-    width: 14%;
+    transform: translateX(60%);
+    width: 15%;
   }
   .about-title::after {
     transform: translateX(-9%);
@@ -627,7 +730,7 @@ textarea {
 @media (min-width: 576px) and (max-width: 990px) {
   .message {
     padding-top: 6%;
-    padding-left: 31px;
+    padding-left: 19px;
   }
 
   .about-holder {
@@ -649,13 +752,8 @@ textarea {
     font-size: 2rem;
   }
   .about-title::after {
-    height: 4.5px;
+    height: 6px;
     margin: 7px 0;
-    font-size: 1rem;
-  }
-  .about-title::after {
-    margin: 10px 0;
-    height: 4.5px;
     font-size: 1rem;
   }
   .button {
@@ -663,4 +761,3 @@ textarea {
     height: 40px !important;
   }
 }
-

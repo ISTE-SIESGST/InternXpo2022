@@ -11,6 +11,18 @@ $(document).ready(function () {
   });
 })
 
+// SCROLL-NAVBARBG
+$(document).ready(function () {
+  var $navbar = $('nav');
+  $(window).scroll(function () {
+    var current = $(this).scrollTop();
+    if (current > 0) {
+      $navbar.addClass('active-scroll');
+    } else {
+      $navbar.removeClass('active-scroll')
+    }
+   })
+ })
 
 // PRELOADER
 

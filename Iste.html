@@ -31,7 +31,7 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 
-    <title>ISTE | InternXpo'22</title>
+    <title>InternXpo | ISTE SIESGST</title>
 
     <style>
         .coming-soon h1 {
@@ -128,46 +128,72 @@
 
             <!-- ISTE HEADING -->
             <div class="h-75 d-flex align-items-center">
-                <!-- <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="internxpo_head">
-                    <h1 class="text-center">InternXpo 2022</h1>
-                    <h3 class="text-center mt-3 h3">
-                        Registrations Closing on
-                    </h3>
-                    <h2 class="text-center mt-2 h2">
-                        6th January - 12:00pm
-                    </h2>
-                </div>
-            </div>
-            <div class="row justify-content-center mb-4">
-                <a href="./Domains.html" class="register_button">
-                    Apply Now
-                </a>
-            </div>
-            <div class="row justify-content-center text-center">
-                <p class="col head_team">
-                    An event by 
-                    <strong style="color: #FF931E; font-weight: 900; text-shadow: 1.5px 1.5px #181163;">
-                        ISTE SIESGST
-                    </strong>
-                </p>
-                <div class="col-12 mb-5">
-                    <img src="https://iste.siesgst.ac.in/assets/img/iste-logo-02.png" alt="" class="iste_logo" width="100">
-                    <img src="https://iste.siesgst.ac.in/assets/img/SIES%20GST%20Black.png" alt="" class="iste_logo" width="190">
-                </div>
-            </div>
-        </div> -->
-
                 <div class="container">
+                    <div class="row justify-content-center mb-4">
+                        <div>
+                            <div class="text-center internxpo_head">
+                                <h1>InternXpo 2022</h1>
+                            </div>
+                            <h3 class="text-center mt-3 h3">
+                                Registrations Closing on
+                            </h3>
+                            <h2 class="text-center mt-2 h2">
+                                6th January - 12:00pm
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-4">
+                        <a href="./Domains.html" class="register_button">
+                            Apply Now
+                        </a>
+                    </div>
+                    <div class="row justify-content-center text-center">
+                        <p class="col head_team">
+                            An event by
+                            <strong style="color: #FF931E; font-weight: 900; text-shadow: 1.5px 1.5px #181163;">
+                                ISTE SIESGST
+                            </strong>
+                        </p>
+                        <div class="col-12 mb-5">
+                            <img src="./Images/iste hero logo.png" alt="" class="iste_logo" width="100">
+                            <img src="./Images/SIES GST White.png" alt="" class="iste_logo" width="100">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="container">
                     <div class="row justify-content-center coming-soon">
                         <h1 style="margin-top: -132px;" data-aos="fade-up" data-aos-delay="100">COMING SOON</h1>
                     </div>
                     <div class="loading" data-aos="fade-up" data-aos-delay="300"><span></span></div>
-                </div>
+                </div> -->
             </div>
 
         </section>
+
+        <!-- TIMER  -->
+        <div class="container-fluid countdown">
+            <div class="container">
+                <div class="row justify-content-around text-center ">
+                    <div class="timer" data-aos="fade-up" data-aos-delay="0">
+                        <h2 id="days"></h2>
+                        <small>Days</small>
+                    </div>
+                    <div class="timer" data-aos="fade-up" data-aos-delay="300">
+                        <h2 id="Hours"></h2>
+                        <small>Hours</small>
+                    </div>
+                    <div class="timer" data-aos="fade-up" data-aos-delay="600">
+                        <h2 id="Minutes"></h2>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="timer" data-aos="fade-up" data-aos-delay="900">
+                        <h2 id="Seconds"></h2>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- ABOUT -->
         <div class="container" id="about">
@@ -215,26 +241,30 @@
                     <div class="row details">
                         <div class="col-lg-6 col-sm-12">
                             <div class="col-12 box">
-                                <label>Your Name*</label><br>
-                                <input type="text">
+                                <input type="text" required="required">
+                                <span>Your Name*</span>
+                                <i></i>
                             </div>
                             <div class="col-12 box">
-                                <label>Your email address*</label><br>
-                                <input type="text">
+                                <input type="text" required="required">
+                                <span>Your email address*</span>
+                                <i></i>
                             </div>
                             <div class="col-12 box">
-                                <label>Your mobile*</label><br>
-                                <input type="text">
+                                <input type="text" required="required">
+                                <span>Your mobile*</span>
+                                <i></i>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 message">
-                            <label>Message*</label><br>
-                            <textarea name="" id="" rows="4" cols="10" style="height: 175px;"></textarea>
+                            <span>Message*</span><br>
+                            <textarea name="" id="" rows="4" cols="10" required="required"></textarea>
+                            <i></i>
                         </div>
                     </div>
                     <div class="row checkbox">
                         <div class="col-lg-6 col-sm-12 checkbox-msg">
-                            <input type="checkbox">
+                            <input type="checkbox" required="required">
                             <label>
                                 I accept the terms & conditions and I understand that my data will be hold securely in
                                 accordance
@@ -244,30 +274,6 @@
                         <div class="col-lg-6 col-sm-12 button">
                             <button type="button" class="btn btn-primary contact-btn">SEND MESSAGE</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TIMER  -->
-        <div class="container-fluid countdown">
-            <div class="container">
-                <div class="row justify-content-around text-center ">
-                    <div class="timer" data-aos="fade-up" data-aos-delay="0">
-                        <h2 id="days"></h2>
-                        <small>Days</small>
-                    </div>
-                    <div class="timer" data-aos="fade-up" data-aos-delay="300">
-                        <h2 id="Hours"></h2>
-                        <small>Hours</small>
-                    </div>
-                    <div class="timer" data-aos="fade-up" data-aos-delay="600">
-                        <h2 id="Minutes"></h2>
-                        <small>Minutes</small>
-                    </div>
-                    <div class="timer" data-aos="fade-up" data-aos-delay="900">
-                        <h2 id="Seconds"></h2>
-                        <small>Seconds</small>
                     </div>
                 </div>
             </div>
@@ -390,7 +396,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            offset: 150,
+            offset: 50,
             duration: 1000,
         });
     </script>
