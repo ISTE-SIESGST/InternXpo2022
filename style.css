@@ -323,6 +323,7 @@ textarea {
 
 .box input:focus ~ span,
 .box input:valid ~ span {
+  background: transparent;
   color: #6648eb;
   transform: translateY(-16px);
   font-size: 0.8em;
