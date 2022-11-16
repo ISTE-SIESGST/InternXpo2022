@@ -14,7 +14,7 @@ document.querySelector("form.myform").addEventListener("submit", function (e) {
   //prevent the normal submission of the form
   e.preventDefault();
 
-  console.log(fmessage);
+  console.log(fmessage + fname + phone + email);
 
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -24,7 +24,7 @@ document.querySelector("form.myform").addEventListener("submit", function (e) {
     From: email ,
     Subject: "New Registration",
     Body: "Name: " + fname + "<br> Email: " + email + "<br> Phone no: " + phone + "<br> Message: " + fmessage ,
-  }).then((message) => alert("Details Sent Successfully !"));
+  }).then((message) => alert(message + "Details Sent Successfully !"));
 
 });
 
