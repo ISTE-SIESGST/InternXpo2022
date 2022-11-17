@@ -339,7 +339,7 @@ textarea {
   overflow: hidden;
 }
 
-.box input:focus ~ i, 
+.box input:focus ~ i,
 .box input:valid ~ i {
   background: #5c38ff;
 }
@@ -511,10 +511,12 @@ textarea:focus ~ span {
 }
 
 @keyframes cursor {
-  0%,75% {
+  0%,
+  75% {
     opacity: 1;
   }
-  76%,100% {
+  76%,
+  100% {
     opacity: 0;
   }
 }
@@ -568,46 +570,45 @@ textarea:focus ~ span {
     display: block;
   }
 
-  #toggle {
-    display: inline-block;
+  #hamburger {
+    display: block;
     position: relative;
-    width: 30px;
-    height: 30px;
-    margin-top: -11px;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
     cursor: pointer;
-    z-index: 3;
-  }
-  #toggle::before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: 0.3s;
-  }
-  #toggle::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: 0.3s;
-  }
-  .banner.active #toggle::before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  .banner.active #toggle::after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    padding-right: 10px;
   }
 
-  .banner {
-    transition: 0.5s;
+  #hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #d1d1d1;
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+  }
+
+  #hamburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background: #5c38ff;
+  }
+
+  .banner.active #hamburger span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+  }
+  .banner.active #hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  .banner.active #hamburger span:nth-child(3) {
+    /*transform: translate(-1px,-8px) rotate(-45deg);*/
+    transform: translate(-3px, 3px) rotate(-45deg);
   }
 
   #navigation {
@@ -697,9 +698,9 @@ textarea:focus ~ span {
   }
 
   .about-info > p {
-    text-align: center;
+    text-align: justify;
     font-size: 11px;
-    line-height: 28px;
+    line-height: 26px;
   }
 
   .about-holder {
@@ -725,6 +726,15 @@ textarea:focus ~ span {
   }
   #progressbar {
     width: 5px;
+  }
+  .contact {
+    max-width: 400px;
+  }
+  .box {
+    margin-bottom: 30px;
+  }
+  .internxpo_head::before {
+    right: 15px;
   }
 }
 
@@ -760,5 +770,8 @@ textarea:focus ~ span {
   .button {
     margin-top: 64px;
     height: 40px !important;
+  }
+  .contact {
+    max-width: 600px;
   }
 }
