@@ -703,6 +703,10 @@ textarea:focus ~ span {
     line-height: 26px;
   }
 
+  #about {
+    margin: 0rem auto;
+  }
+
   .about-holder {
     justify-content: center;
   }
