@@ -1,68 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../Images/Favicon.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../Images/Favicon.jpg"
+      type="image/x-icon"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/65d2ebec1e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/65d2ebec1e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
 
     <title>EntreSpace | InternXpo'23</title>
     <style>
-        .company_logo {
-            width: 80%;
-        }
+      .company_logo {
+        width: 80%;
+      }
 
-        .company_roles li {
-            list-style: none;
-            padding: 10px;
-        }
+      .company_roles li {
+        list-style: none;
+        padding: 10px;
+      }
 
-        .company_apply {
-            background-color: #5C38FF !important;
-            color: white !important;
-            border-radius: 8px;
-            width: fit-content;
-        }
+      .company_apply {
+        background-color: #5c38ff !important;
+        color: white !important;
+        border-radius: 8px;
+        width: fit-content;
+      }
 
-        h3 {
-            display: block;
-            color: goldenrod;
-        }
+      h3 {
+        display: block;
+        color: goldenrod;
+      }
 
-        .company-heading {
-            margin-top: 7rem;
-        }
+      .company-heading {
+        margin-top: 7rem;
+      }
 
-        .about_company {
-            margin: 30px;
-        }
+      .about_company {
+        margin: 30px;
+      }
     </style>
-</head>
+  </head>
 
-<body onload="preloader()">
-
+  <body onload="preloader()">
     <!-- PRELOADER -->
     <div id="loading"></div>
 
@@ -71,187 +89,225 @@
     <div id="scrollpath"></div>
 
     <div class="banner" id="sec">
+      <!-- NAVBAR -->
+      <nav>
+        <div id="hamburger" onclick="toggle()">
+          <span></span><span></span><span></span>
+        </div>
+        <a href="../index.html"
+          ><img src="../Images/iste logo nav.png" alt=""
+        /></a>
+        <ul>
+          <li>
+            <a
+              href="../Brochures/ISTE BROUCHRE .pdf"
+              class="links"
+              target="_blank"
+              >Brochure</a
+            >
+          </li>
+          <li><a href="../Team.html" class="links">Team</a></li>
+          <li><a href="#footer" class="links">Contact</a></li>
+          <!-- <li><a href="../Domains.html" class="active"><span>Apply Now !</span></a></li> -->
+        </ul>
+      </nav>
 
+      <!-- Page -->
+      <main class="container text-center company-details">
+        <div class="company-heading">
+          <h1 class="mb-5">Companies and MSME's</h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-4 col-sm-12">
+            <a href="https://entrespace.in/" target="_blank">
+              <img
+                src="https://iste.siesgst.ac.in/companies/assets/img/logo/entrspace.png"
+                alt=""
+                class="company_logo"
+              />
+            </a>
+          </div>
+          <div class="col-md-8 col-sm-12 mt-sm-5">
+            <h1>
+              <a href="https://entrespace.in/" target="_blank">EntreSpace</a>
+            </h1>
+            <p class="about_company">
+              We are a platform that bridges the gap between the entrepreneurs
+              and investors with all the necessary IT infra, consultancy,
+              branding, etc. to help them build a successful business. Our
+              effort is to make every available entrepreneurial resources at
+              their doorsteps. Our goal is to reach out to the last person in
+              the last row so that they can also benifit from our platform. Our
+              mission is to help entrepreneurs achieve their business objectives
+              by providing innovative, best-in-class consulting, IT solutions
+              and services and to make it a joy for all investors to work with
+              us.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex flex-column text-center mt-5">
+          <h3 class="mb-4">Available Roles:</h3>
+          <ul class="company_roles p-0">
+            <li>Digital Marketing</li>
+            <li>Graphics</li>
+            <li>Legal</li>
+            <li>Sales</li>
+            <li>Social media marketing</li>
+            <li>Tech Support</li>
+          </ul>
+          <br />
+        </div>
+        <div class="row justify-content-center mt-3">
+          <a href="#" class="nav-link nav_links company_apply mx-1 px-3"
+            >Application Closed!</a
+          >
+        </div>
+      </main>
 
-        <!-- NAVBAR -->
-        <nav>
-            <div id="hamburger" onclick="toggle()"> <span></span><span></span><span></span> </div>
-            <a href="../index.html"><img src="../Images/iste logo nav.png" alt=""></a>
-            <ul>
-                <li><a href="../Brochures/ISTE BROUCHRE .pdf" class="links"
-                        target="_blank">Brochure</a></li>
-                <li><a href="../Team.html" class="links">Team</a></li>
-                <li><a href="#footer" class="links">Contact</a></li>
-                <!-- <li><a href="../Domains.html" class="active"><span>Apply Now !</span></a></li> -->
-            </ul>
-        </nav>
-
-
-        <!-- Page -->
-        <main class="container text-center company-details">
-            <div class="company-heading">
-                <h1 class="mb-5">Companies and MSME's</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-4 col-sm-12">
-                    <a href="https://entrespace.in/" target="_blank">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/entrspace.png" alt=""
-                            class=" company_logo">
-                    </a>
-                </div>
-                <div class="col-md-8 col-sm-12 mt-sm-5">
-                    <h1><a href="https://entrespace.in/" target="_blank">EntreSpace</a></h1>
-                    <p class="about_company">
-                        We are a platform that bridges the gap between the entrepreneurs and investors with all the
-                        necessary IT infra, consultancy, branding, etc. to help them build a successful business. Our
-                        effort
-                        is to make every available entrepreneurial resources at their doorsteps. Our goal is to reach
-                        out to
-                        the last person in the last row so that they can also benifit from our platform. Our mission is
-                        to
-                        help entrepreneurs achieve their business objectives by providing innovative, best-in-class
-                        consulting, IT solutions and services and to make it a joy for all investors to work with us.
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex flex-column text-center mt-5">
-                <h3 class="mb-4">Available Roles:</h3>
-                <ul class="company_roles p-0">
-                    <li>
-                        Digital Marketing
-                    </li>
-                    <li>
-                        Graphics
-                    </li>
-                    <li>
-                        Legal
-                    </li>
-                    <li>
-                        Sales
-                    </li>
-                    <li>
-                        Social media marketing
-                    </li>
-                    <li>
-                        Tech Support
-                    </li>
-                </ul>
-                <br>
-            </div>
-            <div class="row justify-content-center mt-3">
-                <a href="#" class="nav-link nav_links company_apply mx-1 px-3">Application Closed!</a>
-            </div>
-        </main>
-
-        <!-- FOOTER -->
-        <footer id="footer">
-            <div class="container-fluid" style="background: #2C2C2C;">
-                <div class="container-fluid footer-box">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-8 no-gutters">
-                            <div class="col-12 row">
-                                <div class="col-sm-12 col-md-8 col-lg-8 p-0">
-                                    <div class="col-12">
-                                        <img src="../Images/ISTE Logo.svg" alt="">
-                                    </div>
-                                    <div class="col-12 pt-5">
-                                        <p>
-                                            The ISTE and InternXpo logo is copyright under ISTE.ORG
-                                            ISTE SIESGST operates indepedently under ISTE.ORG
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
-                                    <div class="widget">
-                                        <h5>Useful Links</h5>
-                                        <ul class="list-unstyled float-left links pt-3">
-                                            <li><a href="#about">About</a></li>
-                                            <li><a href="../Team.html">Team</a></li>
-                                            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
-                                                    target="_blank">Brochure</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 pt-5 subtitle">
-                                <p>
-                                    Site Designed & Maintained by : <span> Technical Team @ISTESIESGST </span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-4">
-                            <h5>Reach Us</h5>
-                            <div class="widget">
-                                <ol class="list-unstyled social ">
-                                    <li><a href="mailto:iste@siesgst.ac.in" target="_blank"><i
-                                                class="fa-solid fa-square-envelope fa-xl"></i></i></i></a></li>
-                                    <li><a href="https://www.instagram.com/iste_siesgst/" target="_blank"><i
-                                                class="fa-brands fa-square-instagram fa-xl"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/iste-sies-gst/mycompany/"
-                                            target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                                </ol>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p> Varun Sondur: 8879917905 <br>
-                                        Raj Pawar: 9321763056</p>
-                                </div>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p>iste@siesgst.ac.in</p>
-                                </div>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p>
-                                        SIES Graduate School of Technology, <br>
-                                        Plot 1-C D&E, Sector-V, Navi Mumbai, Maharashtra.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div class="container-fluid" style="background: #2c2c2c">
+          <div class="container-fluid footer-box">
+            <div class="row">
+              <div class="col-sm-12 col-lg-8 no-gutters">
+                <div class="col-12 row">
+                  <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+                    <div class="col-12">
+                      <img src="../Images/ISTE Logo.svg" alt="" />
                     </div>
+                    <div class="col-12 pt-5">
+                      <p>
+                        The ISTE and InternXpo logo is copyright under ISTE.ORG
+                        ISTE SIESGST operates indepedently under ISTE.ORG
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
+                    <div class="widget">
+                      <h5>Useful Links</h5>
+                      <ul class="list-unstyled float-left links pt-3">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="../Team.html">Team</a></li>
+                        <li>
+                          <a
+                            href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
+                            target="_blank"
+                            >Brochure</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-12 pt-5 subtitle">
+                  <p>
+                    Site Designed & Maintained by :
+                    <span> Technical Team @ISTESIESGST </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-4">
+                <h5>Reach Us</h5>
+                <div class="widget">
+                  <ol class="list-unstyled social">
+                    <li>
+                      <a href="mailto:iste@siesgst.ac.in" target="_blank"
+                        ><i class="fa-solid fa-square-envelope fa-xl"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/iste_siesgst/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram fa-xl"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/iste-sies-gst/mycompany/"
+                        target="_blank"
+                        ><i class="fa-brands fa-linkedin fa-xl"></i
+                      ></a>
+                    </li>
+                  </ol>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>
+                      Yash Wagh:
+                      <a href="tel:+919423565644">+91 94235 65644</a> <br />
+                      Namah Kohli:
+                      <a href="tel:+918999149962">+91 89991 49962</a> <br />
+                      Nidhish Vyas:
+                      <a href="tel:+919769563335">+91 97695 63335</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="mailto:iste@siesgst.ac.in" target="_blank">iste@siesgst.ac.in</a>
+                  </div>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>
+                      SIES Graduate School of Technology, <br />
+                      Plot 1-C D&E, Sector-V, <br />Navi Mumbai, Maharashtra.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- MOBILE NAVMENU -->
     <div id="navigation" class="a">
-        <ul>
-            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf" class="links"
-                    target="_blank">Brochure</a></li>
-            <li><a href="../Team.html" class="links">Team</a></li>
-            <li><a href="#ContactForm" class="links">Contact</a></li>
-            <!-- <li><a href="../Domains.html">Apply Now !</a></li> -->
-        </ul>
+      <ul>
+        <li>
+          <a
+            href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
+            class="links"
+            target="_blank"
+            >Brochure</a
+          >
+        </li>
+        <li><a href="../Team.html" class="links">Team</a></li>
+        <li><a href="#ContactForm" class="links">Contact</a></li>
+        <!-- <li><a href="../Domains.html">Apply Now !</a></li> -->
+      </ul>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../Script.js"></script>
 
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
