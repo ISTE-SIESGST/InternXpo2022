@@ -394,7 +394,7 @@ textarea:focus ~ span {
 }
 
 #about {
-  margin: 6rem auto;
+  margin: 4rem auto;
   max-width: 1400px;
   padding: 40px;
 }
