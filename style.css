@@ -405,6 +405,7 @@ textarea:focus ~ span {
 
 .about-image > img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .about-heading > h3 i {
