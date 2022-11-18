@@ -140,7 +140,7 @@ nav ul li .active:hover:before {
   margin: 0 auto;
   letter-spacing: 0.15em;
   font-weight: bolder;
-  animation: typing 3s steps(40, end), infinite;
+  animation: typing 3s steps(40,end), infinite;
 }
 .internxpo_head::before {
   content: "";
@@ -329,6 +329,11 @@ textarea {
   font-size: 0.8em;
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance : none;
+  margin: 0;
+}
+
 .box i {
   position: absolute;
   left: 0;
@@ -500,6 +505,10 @@ textarea:focus ~ span {
 
 .companies {
   padding: 50px;
+}
+
+.company-subheading {
+  font-size: 30px;
 }
 
 @keyframes typing {
@@ -740,6 +749,9 @@ textarea:focus ~ span {
   }
   .internxpo_head::before {
     right: 15px;
+  }
+  .company-subheading {
+    margin-top: 30px;
   }
 }
 

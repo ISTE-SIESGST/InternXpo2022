@@ -98,13 +98,13 @@ document.querySelector("form.myform").addEventListener("submit", function (e) {
   console.log(fmessage + fname + phone + email);
 
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "username",
-    Password: "password",
-    To: "them@website.com",
+    Host: "smtp.gmail.com",
+    Username: "iste@siesgst.ac.in",
+    Password: "iste@2023",
+    To: "iste@siesgst.ac.in",
     From: email ,
     Subject: "New Registration",
     Body: "Name: " + fname + "<br> Email: " + email + "<br> Phone no: " + phone + "<br> Message: " + fmessage ,
-  }).then((message) => alert(message + "Details Sent Successfully !"));
+  }).then((message) => alert(message));
 
 });
