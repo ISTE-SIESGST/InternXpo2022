@@ -85,6 +85,7 @@ let email = "";
 let fname = "";
 let phone = "";
 let fmessage = "";
+let domain = "iste@siesgst.ac.in";
 
 document.querySelector("form.myform").addEventListener("submit", function (e) {
   email = document.getElementById("email").value;
@@ -98,11 +99,11 @@ document.querySelector("form.myform").addEventListener("submit", function (e) {
   console.log(fmessage + fname + phone + email);
 
   Email.send({
-    Host: "smtp.gmail.com",
+    Host: "smtp.elasticemail.com",
     Username: "iste@siesgst.ac.in",
-    Password: "iste@2023",
+    Password: "0E6CFB712823A3E91C1A0EE3BB8A71EC58DD",
     To: "iste@siesgst.ac.in",
-    From: email ,
+    From: domain ,
     Subject: "New Registration",
     Body: "Name: " + fname + "<br> Email: " + email + "<br> Phone no: " + phone + "<br> Message: " + fmessage ,
   }).then((message) => alert(message));
