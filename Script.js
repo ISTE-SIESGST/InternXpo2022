@@ -106,6 +106,6 @@ document.querySelector("form.myform").addEventListener("submit", function (e) {
     From: domain ,
     Subject: "New Registration",
     Body: "Name: " + fname + "<br> Email: " + email + "<br> Phone no: " + phone + "<br> Message: " + fmessage ,
-  }).then((message) => alert(message));
+  }).then((message) => alert("Details sent successfully !"));
 
 });
