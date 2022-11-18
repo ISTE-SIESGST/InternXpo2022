@@ -1,99 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/65d2ebec1e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/65d2ebec1e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Domains | InternXpo'22</title>
 
     <style>
-        .company-heading {
-            color: #5C38FF;
-            font-weight: 600;
-        }
+      .company-heading {
+        color: #5c38ff;
+        font-weight: 600;
+      }
 
-        a {
-            color: #5C38FF;;
-        }
+      a {
+        color: #5c38ff;
+      }
 
-        a:hover {
-            color: goldenrod;
-            transition: 0s;
-        }
-        #footer img {
-            background: none;
-            padding: 0;
-            border-radius: 0;
-        }
-        img {
-            background: #ffffff;
-            padding: 13px;
-            border-radius: 15px;
-        }
-        hr {
-            background: #5C38FF;
-        }
+      a:hover {
+        color: goldenrod;
+        transition: 0s;
+      }
+      #footer img {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+      }
+      img {
+        background: #ffffff;
+        padding: 13px;
+        border-radius: 15px;
+      }
+      hr {
+        background: #5c38ff;
+      }
     </style>
-</head>
+  </head>
 
-<body onload="preloader()">
-
+  <body onload="preloader()">
     <!-- PRELOADER -->
     <div id="loading"></div>
 
     <!-- ScrollBar -->
     <div id="progressbar"></div>
     <div class="banner" id="sec">
+      <!-- NAVBAR -->
+      <nav class="container-fluid">
+        <div id="hamburger" onclick="toggle()">
+          <span></span><span></span><span></span>
+        </div>
+        <a href="./index.html"
+          ><img src="./Images/iste logo nav.png" alt=""
+        /></a>
+        <ul>
+          <li>
+            <a
+              href="./Brochures/ISTE BROUCHRE .pdf"
+              class="links"
+              target="_blank"
+              >Brochure</a
+            >
+          </li>
+          <li><a href="./Team.html" class="links">Team</a></li>
+          <li><a href="#ContactForm" class="links">Contact</a></li>
+          <li>
+            <a href="./Domains.html" class="active"><span>Apply Now !</span></a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- NAVBAR -->
-        <nav class="container-fluid">
-            <div id="hamburger" onclick="toggle()"> <span></span><span></span><span></span> </div>
-            <a href="./Iste.html"><img src="./Images/iste logo nav.png" alt=""></a>
-            <ul>
-                <li><a href="./Brochures/ISTE BROUCHRE .pdf" class="links"
-                        target="_blank">Brochure</a></li>
-                <li><a href="./Team.html" class="links">Team</a></li>
-                <li><a href="#ContactForm" class="links">Contact</a></li>
-                <li><a href="./Domains.html" class="active"><span>Apply Now !</span></a></li>
-            </ul>
-        </nav>
-
-        <!-- Companies -->
-        <div class="container mt-5 pt-5 mb-5">
-            <!-- <div class="row justify-content-center text-center mb-4">
+      <!-- Companies -->
+      <div class="container mt-5 pt-5 mb-5">
+        <!-- <div class="row justify-content-center text-center mb-4">
             <div class="col-lg-6 col-md-7 col-sm-9 col-xs-1 mb-1">
                 <div class="h1">Companies Hiring Now!!</div>
                 <hr style="height:6px;opacity: 1 !important; width: 50%; margin: auto;">
             </div>
         </div> -->
-            <!-- <div class="row text-center justify-content-center">
+        <!-- <div class="row text-center justify-content-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <a href="./companies/Fullstack.html">
-                    <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/TeamFullstack2.png" alt=""
+                <a href="./Companies/Fullstack.html">
+                    <img src="https://iste.siesgst.ac.in/Companies/assets/img/logo/TeamFullstack2.png" alt=""
                         height="200px">
                 </a>
                 <div class="container">
@@ -105,8 +130,8 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <a href="./companies/Fullstack.html">
-                    <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/TeamFullstack2.png" alt=""
+                <a href="./Companies/Fullstack.html">
+                    <img src="https://iste.siesgst.ac.in/Companies/assets/img/logo/TeamFullstack2.png" alt=""
                         height="200px">
                 </a>
                 <div class="container">
@@ -118,432 +143,561 @@
                 </div>
             </div>
         </div> -->
-            <div class="row my-4 justify-content-center text-center">
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
-                    <div class="h3 mt-4" style="color: #FF931E;">
-                        Our Previous Recruiters
-                    </div>
-                </div>
+        <div class="row my-4 justify-content-center text-center">
+          <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
+            <div class="h3 mt-4" style="color: #ff931e">
+              Our Previous Recruiters
             </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
-                    <div class="h3 mt-4 company-heading">Companies and MSME's</div>
-                    <hr class="mx-auto mb-4" style="height: 4px;opacity: 1 !important; width: 90%;">
-                </div>
-            </div>
-            <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/20CubeLogistics.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/cube.png" alt="" height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/20CubeLogistics.html">
-                                <h4>20Cube Logistics</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/EntreSpace.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/entrspace.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/EntreSpace.html">
-                                <h4>EntreSpace</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/Eduvance.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/eduvance.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/Eduvance.html">
-                                <h4>EduVance</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/The Great Indian Derby.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/derby.jpg" alt="" height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/The Great Indian Derby.html">
-                                <h4>The Great Indian Derby</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/HaleAI.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/haleai.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/HaleAI.html">
-                                <h4>HaleAI</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/VirtuoSkill.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/virtuoskill.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/VirtuoSkill.html">
-                                <h4>VirtuoSkill</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/InfigonFutures.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/infigon.jpg" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/InfigonFutures.html">
-                                <h4>Infigon Futures</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./Companies/AutoNxt Automation.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/autonxt.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/AutoNxt Automation.html">
-                                <h4>AutoNxt Automation</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./companies/Fullstack.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/TeamFullstack2.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/FullStack.html">
-                                <h4>Team FullStack</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12  companies">
-                    <a href="./companies/Quenfi Labs.html">
-                        <img src="https://iste.siesgst.ac.in/companies/assets/img/logo/QuenfiLabs.jpeg" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./Companies/Quenfi Labs.html">
-                                <h4>Quenfi Labs</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center text-center mt-5">
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
-                    <div class="h3 mt-4 company-heading">Alumni Startups</div>
-                    <hr class="mx-auto mb-4" style="height: 4px;opacity: 1 !important; width: 90%;">
-                </div>
-            </div>
-            <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./AlumniStartups/Unotech.html">
-                        <img src="https://iste.siesgst.ac.in/alumni/assets/logo/unotech.png" alt="" height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./AlumniStartups/Unotech.html">
-                                <h4>UNOTECH</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./AlumniStartups/Ahy Consulting.html">
-                        <img src="https://iste.siesgst.ac.in/alumni/assets/logo/ahyconsulting.png" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./AlumniStartups/Ahy Consulting.html">
-                                <h4>Ahy Consulting</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./AlumniStartups/Createch™.html">
-                        <img src="https://iste.siesgst.ac.in/alumni/assets/logo/createch.jpg" alt="" height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./AlumniStartups/Createch™.html">
-                                <h4>CreaTech</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./AlumniStartups/Qrius Ventures.html">
-                        <img src="https://iste.siesgst.ac.in/alumni/assets/logo/qriusventures.jpeg" alt=""
-                            height="200px" width="200px" style="object-fit: contain;">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./AlumniStartups/Qrius Ventures.html">
-                                <h4>Qrius Ventures</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./AlumniStartups/Anthill Spaces.html">
-                        <img src="https://iste.siesgst.ac.in/alumni/assets/logo/anthill.png" alt="" height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./AlumniStartups/Anthill Spaces.html">
-                                <h4>AntHill Spaces Pvt. Ltd.</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center text-center mt-5">
-                <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
-                    <div class="h3 mt-4 company-heading">Student Chapters and Mega Projects</div>
-                    <hr class="mx-auto mb-4" style="height: 4px;opacity: 1 !important; width: 90%;">
-                </div>
-            </div>
-            <div class="row text-center justify-content-center mb-5">
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./StudentChapters/IEEE Smart Village.html">
-                        <img src="https://iste.siesgst.ac.in/chapters/assets/img/logo/ISV_LOGO.jpg" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./StudentChapters/IEEE Smart Village.html">
-                                <h4>IEEE SIESGST</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 companies">
-                    <a href="./StudentChapters/gotech.html">
-                        <img src="https://iste.siesgst.ac.in/chapters/assets/img/logo/tech_team.jpg" alt=""
-                            height="200px">
-                    </a>
-                    <div class="container pt-4">
-                        <div class="row justify-content-center">
-                            <a href="./StudentChapters/gotech.html">
-                                <h4>Technical Team SIESGST</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row justify-content-center text-center mt-5">
-            <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
-                <div class="h3 mt-4">Departments</div>
-                <hr class="mx-auto mb-4" style="height: 4px;opacity: 1 !important; width: 90%;">
-            </div>
-        </div> -->
-            <!-- <div class="row text-center justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="./Departments/CE.html">
-                    <img src="https://iste.siesgst.ac.in/department/assets/img/logo/ce.png" alt="" height="200px">
-                </a>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <a href="./Departments/CE.html">
-                            <h4>Computer Engineering</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="./Departments/IT.html">
-                    <img src="https://iste.siesgst.ac.in/department/assets/img/logo/it.png" alt="" height="200px">
-                </a>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <a href="./Departments/IT.html">
-                            <h4>Information Technology</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="./Departments/MECH.html">
-                    <img src="https://iste.siesgst.ac.in/department/assets/img/logo/mech.png" alt="" height="200px">
-                </a>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <a href="./Departments/MECH.html">
-                            <h4>Mechanical</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="./Departments/EXTC.html">
-                    <img src="https://iste.siesgst.ac.in/department/assets/img/logo/extc.png" alt="" height="200px">
-                </a>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <a href="./Departments/EXTC.html">
-                            <h4>Electronics and Telecommunication</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="./Departments/PPT.html">
-                    <img src="https://iste.siesgst.ac.in/department/assets/img/logo/ppt.png" alt="" height="200px">
-                </a>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <a href="./Departments/PPT.html">
-                            <h4>Printing and Packaging Technology</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+          </div>
         </div>
-
-        <!-- FOOTER -->
-        <footer id="footer">
-            <div class="container-fluid" style="background: #2C2C2C;">
-                <div class="container-fluid footer-box">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-8 no-gutters">
-                            <div class="col-12 row">
-                                <div class="col-sm-12 col-md-8 col-lg-8 p-0">
-                                    <div class="col-12">
-                                        <img src="./Images/ISTE Logo.svg" alt="">
-                                    </div>
-                                    <div class="col-12 pt-5">
-                                        <p>
-                                            The ISTE and InternXpo logo is copyright under ISTE.ORG
-                                            ISTE SIESGST operates indepedently under ISTE.ORG
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
-                                    <div class="widget">
-                                        <h5>Useful Links</h5>
-                                        <ul class="list-unstyled float-left links pt-3">
-                                            <li><a href="#about">About</a></li>
-                                            <li><a href="./Team.html">Team</a></li>
-                                            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
-                                                    target="_blank">Brochure</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 pt-5 subtitle">
-                                <p>
-                                    Site Designed & Maintained by : <span> Technical Team @ISTESIESGST </span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-4">
-                            <h5>Reach Us</h5>
-                            <div class="widget">
-                                <ol class="list-unstyled social ">
-                                    <li><a href="mailto:iste@siesgst.ac.in" target="_blank"><i
-                                                class="fa-solid fa-square-envelope fa-xl"></i></i></i></a></li>
-                                    <li><a href="https://www.instagram.com/iste_siesgst/" target="_blank"><i
-                                                class="fa-brands fa-square-instagram fa-xl"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/iste-sies-gst/mycompany/"
-                                            target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                                </ol>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p> Varun Sondur: 8879917905 <br>
-                                        Raj Pawar: 9321763056</p>
-                                </div>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p>iste@siesgst.ac.in</p>
-                                </div>
-                            </div>
-                            <div class="col-12 no-gutters row info">
-                                <div class="col-1">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="col-10">
-                                    <p>
-                                        SIES Graduate School of Technology, <br>
-                                        Plot 1-C D&E, Sector-V, Navi Mumbai, Maharashtra.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
+            <div class="h3 mt-4 company-heading">Companies and MSME's</div>
+            <hr
+              class="mx-auto mb-4"
+              style="height: 4px; opacity: 1 !important; width: 90%"
+            />
+          </div>
+        </div>
+        <div class="row text-center justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/20CubeLogistics.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/cube.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/20CubeLogistics.html">
+                  <h4>20Cube Logistics</h4>
+                </a>
+              </div>
             </div>
-        </footer>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/EntreSpace.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/entrspace.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/EntreSpace.html">
+                  <h4>EntreSpace</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/Eduvance.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/eduvance.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/Eduvance.html">
+                  <h4>EduVance</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/The Great Indian Derby.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/derby.jpg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/The Great Indian Derby.html">
+                  <h4>The Great Indian Derby</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/HaleAI.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/haleai.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/HaleAI.html">
+                  <h4>HaleAI</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/VirtuoSkill.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/virtuoskill.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/VirtuoSkill.html">
+                  <h4>VirtuoSkill</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/InfigonFutures.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/infigon.jpg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/InfigonFutures.html">
+                  <h4>Infigon Futures</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/AutoNxt Automation.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/autonxt.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/AutoNxt Automation.html">
+                  <h4>AutoNxt Automation</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/Fullstack.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/TeamFullstack2.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/FullStack.html">
+                  <h4>Team FullStack</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./Companies/Quenfi Labs.html">
+              <img
+                src="https://iste.siesgst.ac.in/Companies/assets/img/logo/QuenfiLabs.jpeg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./Companies/Quenfi Labs.html">
+                  <h4>Quenfi Labs</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center mt-5">
+          <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
+            <div class="h3 mt-4 company-heading">Alumni Startups</div>
+            <hr
+              class="mx-auto mb-4"
+              style="height: 4px; opacity: 1 !important; width: 90%"
+            />
+          </div>
+        </div>
+        <div class="row text-center justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./AlumniStartups/Unotech.html">
+              <img
+                src="https://iste.siesgst.ac.in/AlumniStartups/assets/logo/unotech.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./AlumniStartups/Unotech.html">
+                  <h4>UNOTECH</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./AlumniStartups/Ahy Consulting.html">
+              <img
+                src="https://iste.siesgst.ac.in/AlumniStartups/assets/logo/ahyconsulting.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./AlumniStartups/Ahy Consulting.html">
+                  <h4>Ahy Consulting</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./AlumniStartups/Createch™.html">
+              <img
+                src="https://iste.siesgst.ac.in/AlumniStartups/assets/logo/createch.jpg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./AlumniStartups/Createch™.html">
+                  <h4>CreaTech</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./AlumniStartups/Qrius Ventures.html">
+              <img
+                src="https://iste.siesgst.ac.in/AlumniStartups/assets/logo/qriusventures.jpeg"
+                alt=""
+                height="200px"
+                width="200px"
+                style="object-fit: contain"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./AlumniStartups/Qrius Ventures.html">
+                  <h4>Qrius Ventures</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./AlumniStartups/Anthill Spaces.html">
+              <img
+                src="https://iste.siesgst.ac.in/AlumniStartups/assets/logo/anthill.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./AlumniStartups/Anthill Spaces.html">
+                  <h4>AntHill Spaces Pvt. Ltd.</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center mt-5">
+          <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
+            <div class="h3 mt-4 company-heading">
+              Student Chapters and Mega Projects
+            </div>
+            <hr
+              class="mx-auto mb-4"
+              style="height: 4px; opacity: 1 !important; width: 90%"
+            />
+          </div>
+        </div>
+        <div class="row text-center justify-content-center mb-5">
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./StudentChapters/IEEE Smart Village.html">
+              <img
+                src="https://iste.siesgst.ac.in/StudentChapters/assets/img/logo/ISV_LOGO.jpg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./StudentChapters/IEEE Smart Village.html">
+                  <h4>IEEE SIESGST</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 companies">
+            <a href="./StudentChapters/gotech.html">
+              <img
+                src="https://iste.siesgst.ac.in/StudentChapters/assets/img/logo/tech_team.jpg"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container pt-4">
+              <div class="row justify-content-center">
+                <a href="./StudentChapters/gotech.html">
+                  <h4>Technical Team SIESGST</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row justify-content-center text-center mt-5">
+          <div class="col-lg-5 col-md-7 col-sm-8 col-xs-1">
+            <div class="h3 mt-4">Departments</div>
+            <hr
+              class="mx-auto mb-4"
+              style="height: 4px; opacity: 1 !important; width: 90%"
+            />
+          </div>
+        </div>
+        <div class="row text-center justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <a href="./Departments/CE.html">
+              <img
+                src="https://iste.siesgst.ac.in/Departments/assets/img/logo/ce.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container">
+              <div class="row justify-content-center">
+                <a href="./Departments/CE.html">
+                  <h4>Computer Engineering</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <a href="./Departments/IT.html">
+              <img
+                src="https://iste.siesgst.ac.in/Departments/assets/img/logo/it.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container">
+              <div class="row justify-content-center">
+                <a href="./Departments/IT.html">
+                  <h4>Information Technology</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <a href="./Departments/MECH.html">
+              <img
+                src="https://iste.siesgst.ac.in/Departments/assets/img/logo/mech.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container">
+              <div class="row justify-content-center">
+                <a href="./Departments/MECH.html">
+                  <h4>Mechanical</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <a href="./Departments/EXTC.html">
+              <img
+                src="https://iste.siesgst.ac.in/Departments/assets/img/logo/extc.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container">
+              <div class="row justify-content-center">
+                <a href="./Departments/EXTC.html">
+                  <h4>Electronics and Telecommunication</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <a href="./Departments/PPT.html">
+              <img
+                src="https://iste.siesgst.ac.in/Departments/assets/img/logo/ppt.png"
+                alt=""
+                height="200px"
+              />
+            </a>
+            <div class="container">
+              <div class="row justify-content-center">
+                <a href="./Departments/PPT.html">
+                  <h4>Printing and Packaging Technology</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div class="container-fluid" style="background: #2c2c2c">
+          <div class="container-fluid footer-box">
+            <div class="row">
+              <div class="col-sm-12 col-lg-8 no-gutters">
+                <div class="col-12 row">
+                  <div class="col-sm-12 col-md-8 col-lg-8 p-0">
+                    <div class="col-12">
+                      <img src="./Images/ISTE Logo.svg" alt="" />
+                    </div>
+                    <div class="col-12 pt-5">
+                      <p>
+                        The ISTE and InternXpo logo is copyright under ISTE.ORG
+                        ISTE SIESGST operates indepedently under ISTE.ORG
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4 pl-4">
+                    <div class="widget">
+                      <h5>Useful Links</h5>
+                      <ul class="list-unstyled float-left links pt-3">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="./Team.html">Team</a></li>
+                        <li>
+                          <a
+                            href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
+                            target="_blank"
+                            >Brochure</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-5 subtitle">
+                  <p>
+                    Site Designed & Maintained by :
+                    <span> Technical Team @ISTESIESGST </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-4">
+                <h5>Reach Us</h5>
+                <div class="widget">
+                  <ol class="list-unstyled social">
+                    <li>
+                      <a href="mailto:iste@siesgst.ac.in" target="_blank"
+                        ><i class="fa-solid fa-square-envelope fa-xl"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/iste_siesgst/"
+                        target="_blank"
+                        ><i class="fa-brands fa-square-instagram fa-xl"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/iste-sies-gst/mycompany/"
+                        target="_blank"
+                        ><i class="fa-brands fa-linkedin fa-xl"></i
+                      ></a>
+                    </li>
+                  </ol>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>
+                      Yash Wagh:
+                      <a href="tel:+919423565644">+91 94235 65644</a> <br />
+                      Namah Kohli:
+                      <a href="tel:+918999149962">+91 89991 49962</a> <br />
+                      Nidhish Vyas:
+                      <a href="tel:+919769563335">+91 97695 63335</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="mailto:iste@siesgst.ac.in" target="_blank"
+                      >iste@siesgst.ac.in</a
+                    >
+                  </div>
+                </div>
+                <div class="col-12 no-gutters row info">
+                  <div class="col-1">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="col-10">
+                    <p>
+                      SIES Graduate School of Technology, <br />
+                      Plot 1-C D&E, Sector-V, <br />Navi Mumbai, Maharashtra.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- MOBILE NAVMENU -->
     <div id="navigation" class="a">
-        <ul>
-            <li><a href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf" class="links"
-                    target="_blank">Brochure</a></li>
-            <li><a href="./Team.html" class="links">Team</a></li>
-            <li><a href="#footer" class="links">Contact</a></li>
-            <li><a href="./Domains.html">Apply Now !</a></li>
-        </ul>
+      <ul>
+        <li>
+          <a
+            href="https://iste.siesgst.ac.in/assets/brochure/INTERNXPO%20Final.pdf"
+            class="links"
+            target="_blank"
+            >Brochure</a
+          >
+        </li>
+        <li><a href="./Team.html" class="links">Team</a></li>
+        <li><a href="#footer" class="links">Contact</a></li>
+        <li><a href="./Domains.html">Apply Now !</a></li>
+      </ul>
     </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./Script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
