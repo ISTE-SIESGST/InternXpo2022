@@ -747,9 +747,9 @@ textarea:focus ~ span {
   .box {
     margin-bottom: 30px;
   }
-  .internxpo_head::before {
+  /* .internxpo_head::before {
     right: 15px;
-  }
+  } */
   .company-subheading {
     margin-top: 30px;
   }

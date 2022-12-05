@@ -1,15 +1,3 @@
-// SCROLL-EFFECT
-
-$(document).ready(function () {
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop(),
-      dh = $(document).height(),
-      wh = $(window).height();
-    let scrollpercent = (scroll / (dh - wh)) * 100;
-    $("#progressbar").css("height", scrollpercent + "%");
-  });
-});
-
 // SCROLL-NAVBARBG
 $(document).ready(function () {
   var $navbar = $("nav");
@@ -23,21 +11,25 @@ $(document).ready(function () {
   });
 });
 
+// SCROLL-EFFECT
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop(),
+      dh = $(document).height(),
+      wh = $(window).height();
+    let scrollpercent = (scroll / (dh - wh)) * 100;
+    $("#progressbar").css("height", scrollpercent + "%");
+  });
+});
+
+
 // PRELOADER
 
 var loader = document.getElementById("loading");
 
 function preloader() {
   loader.style.display = "none";
-}
-
-// MOBILE-NAVIGATION
-
-function toggle() {
-  var sec = document.getElementById("sec");
-  var nav = document.getElementById("navigation");
-  sec.classList.toggle("active");
-  nav.classList.toggle("active");
 }
 
 // RIPPLE EFFECT
@@ -51,6 +43,15 @@ btn.onmousemove = function (e) {
   btn.style.setProperty("--y", y + "px");
 };
 
+// MOBILE-NAVIGATION
+
+function toggle() {
+  var sec = document.getElementById("sec");
+  var nav = document.getElementById("navigation");
+  sec.classList.toggle("active");
+  nav.classList.toggle("active");
+}
+
 // TIMER
 
 const days = document.getElementById("days");
@@ -60,7 +61,7 @@ const seconds = document.getElementById("Seconds");
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`November 20 ${currentYear} 00:00:00`);
+const newYearTime = new Date(`December 7 ${currentYear} 00:00:00`);
 
 function updateTimer() {
   const currentTime = new Date();
