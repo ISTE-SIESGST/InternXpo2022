@@ -183,7 +183,7 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 107vh;
+  height: 100vh;
 }
 
 ul {
@@ -511,6 +511,49 @@ textarea:focus ~ span {
   font-size: 30px;
 }
 
+.company-heading {
+  margin-top: 7rem;
+}
+
+.about_company {
+  margin: 30px;
+}
+.company_logo {
+  width: 80%;
+}
+
+.company_roles li {
+  list-style: none;
+  padding: 10px;
+}
+
+.company_apply {
+  background-color: #5c38ff;
+  color: white !important;
+  border-radius: 8px;
+  width: fit-content;
+  min-width: 150px;
+}
+
+.company_apply:hover {
+  background-color: #3c24a7;
+}
+
+h3 {
+  display: block;
+  color: goldenrod;
+}
+.company_apply_video {
+  background: rgb(147, 29, 29);
+  color: white !important;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.internxpo_head h1 {
+  min-width: 360px;
+}
+
 @keyframes typing {
   0% {
     width: 0;
@@ -664,6 +707,7 @@ textarea:focus ~ span {
   }
   .internxpo_head h1 {
     font-size: 2rem;
+    min-width: 290px;
   }
   .internxpo_head h2 {
     font-size: 1.5rem;
@@ -752,6 +796,9 @@ textarea:focus ~ span {
   } */
   .company-subheading {
     margin-top: 30px;
+  }
+  .soon {
+    display: none;
   }
 }
 
